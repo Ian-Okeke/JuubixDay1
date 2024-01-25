@@ -11,6 +11,6 @@ export class ItemsService {
     }
 
     createUser(createItemDto: CreateItemDto){
-        return createItemDto.name + " has been created";
+        return `${createItemDto.name} has been created`;
     }
 }

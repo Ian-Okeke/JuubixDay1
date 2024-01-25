@@ -13,8 +13,8 @@ export class ItemsController {
             return "All items.. ";
         }
     
-    @Get(':id')
-        findItem(@Param('id') id:String)  {
+    @Get(`:id`)
+        findItem(@Param(`id`) id:String)  {
             return this.itemsService.findItem(id);
             
         }
