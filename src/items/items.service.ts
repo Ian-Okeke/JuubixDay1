@@ -5,12 +5,13 @@ import { CreateItemDto } from 'src/dto/createItemDto';
 export class ItemsService {
 
     findItem(id: String){
+
         return ({
             id: id
         })
     }
 
     createUser(createItemDto: CreateItemDto){
-        return createItemDto.name + " has been created";
+        return `${createItemDto.name}  just has been created`;
     }
 }

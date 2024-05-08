@@ -8,13 +8,15 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { PricesController } from './prices/prices.controller';
 import { PricesModule } from './prices/prices.module';
 import { PricesService } from './prices/prices.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import config from 'ormconfig';
 
 // import config from './config/keys'
 
 
 @Module({
   //imports: [MongooseModule.forRoot(config.mongoURI), ItemsModule],
-  imports: [ ItemsModule, PricesModule],
+  imports: [ ItemsModule, PricesModule, TypeOrmModule.forRoot(config)],
   controllers: [AppController, ItemsController, PricesController],
   providers: [AppService, ItemsService, PricesService],
 })
